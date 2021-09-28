@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Globalization</title>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Gemunu+Libre:wght@200&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="container">
+      <h3 class="def"><i>noun</i><br>
+        the process by which businesses or other organizations
+        <br>develop international influence or start operating on an international scale.<br></h3>
+      <h2 class="object" data-value="3">Globalization<br><span class="mini"><center>connecting the world</center></span><span><center>made simple</center></span></h2>
+      <img src="Images/earth.png" class="object" data-value="-2" alt="">
+      <img src="Images/Planet1.png" class="object" data-value="-7" alt="">
+      <img src="Images/Planet2.png" class="object" data-value="4" alt="">
+      <img src="Images/Planet3.png" class="object" data-value="-6" alt="">
+      <img src="Images/Planet4.png" class="object" data-value="8" alt="">
+      <img src="Images/1.png" class="object" data-value="-2" alt="">
+      <img src="Images/2.png" class="object" data-value="-7" alt="">
+      <img src="Images/3.png" class="object" data-value="4" alt="">
+      <img src="Images/4.png" class="object" data-value="-6" alt="">
+      <img src="Images/5.png" class="object" data-value="8" alt="">
+      <img src="Images/6.png" class="object" data-value="5" alt="">
+      <img src="Images/7.png" class="object" data-value="-12" alt="">
+      <img src="Images/8.png" class="object" data-value="-9" alt="">
+    </div>
+    <div id='stars'></div>
+    <div id='stars2'></div>
+
+    <script type="text/javascript">
+    document.addEventListener("mousemove", parallax);
+    function parallax(e){
+      document.querySelectorAll(".object").forEach(function(move){
+
+        var moving_value = move.getAttribute("data-value");
+        var x = (e.clientX * moving_value) / 100;
+        var y = (e.clientY * moving_value) / 100;
+
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+      });
+    }
+    </script>
+        <script type="text/JavaScript">
+          //Script courtesy of BoogieJack.com
+          var message="NoRightClicking";
+          function defeatIE() {if (document.all) {(message);return false;}}
+          function defeatNS(e) {if 
+          (document.layers||(document.getElementById&&!document.all)) {
+          if (e.which==2||e.which==3) {(message);return false;}}}
+          if (document.layers) 
+          {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=defeatNS;}
+          else{document.onmouseup=defeatNS;document.oncontextmenu=defeatIE;}
+          document.oncontextmenu=new Function("return false")
+          </script>
+          <script src="scripts/clickable.js"></script>
+  </body>
