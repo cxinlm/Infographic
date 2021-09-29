@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Globalization</title>
+      <link rel="stylesheet" type="text/css" href="style2.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Gemunu+Libre:wght@200&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="object" data-value="3">Sources:<br><span class="mini"><center>https://www.piie.com/microsites/globalization/what-is-globalization</center></span><br>
+        <span class="mini"><center>https://www.khanacademy.org/humanities/whp-origins/era-7-the-great-convergence-and-divergence-1880-ce-to-the-future/75-global-interactions-betaa/a/read-global-interactions-and-institutions-beta</center></span><br>
+        <span class="mini"><center>https://online.hbs.edu/blog/post/globalization-effects-on-environment</center></span></h2>
+    </div>
+    <div id='stars'></div>
+    <div id='stars2'></div>
+
+    <script type="text/javascript">
+    document.addEventListener("mousemove", parallax);
+    function parallax(e){
+      document.querySelectorAll(".object").forEach(function(move){
+
+        var moving_value = move.getAttribute("data-value");
+        var x = (e.clientX * moving_value) / 100;
+        var y = (e.clientY * moving_value) / 100;
+
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+      });
+    }
+    </script>
+        <script type="text/JavaScript">
+          //Script courtesy of BoogieJack.com
+          var message="NoRightClicking";
+          function defeatIE() {if (document.all) {(message);return false;}}
+          function defeatNS(e) {if 
+          (document.layers||(document.getElementById&&!document.all)) {
+          if (e.which==2||e.which==3) {(message);return false;}}}
+          if (document.layers) 
+          {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=defeatNS;}
+          else{document.onmouseup=defeatNS;document.oncontextmenu=defeatIE;}
+          document.oncontextmenu=new Function("return false")
+          </script>
+          <script src="scripts/clickable.js"></script>
+  </body>

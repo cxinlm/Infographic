@@ -11,8 +11,8 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
     overflow-y: hidden;
-    user-select: none;
-  }
+    pointer-events: none;
+}
 
 .container {
     position: relative;
@@ -25,188 +25,6 @@ body {
     z-index: 999;
 }
 
-.container img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    object-fit: contain;
-}
-
-.container h3 {
-    z-index: -20;
-    position: absolute;
-    color: #ffffff;
-    font-family: 'Gemunu Libre', sans-serif;;
-    font-size: 16px;
-    text-transform: lowercase;
-    font-weight: 650;
-    letter-spacing: 2px;
-    bottom: 91%;
-    right: 59%;
-    opacity: 92%;
-    animation: glitch 1s linear infinite;
-}
-
-@keyframes glitch{
-  2%,64%{
-    transform: translate(2px,0) skew(0deg);
-  }
-  4%,60%{
-    transform: translate(-2px,0) skew(0deg);
-  }
-  62%{
-    transform: translate(0,0) skew(5deg); 
-  }
-}
-
-.h3:before,
-.h3:after{
-  content: attr(title);
-  position: absolute;
-  left: 0;
-}
-
-.h3:before{
-  animation: glitchTop 1s linear infinite;
-  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-}
-
-@keyframes glitchTop{
-  2%,64%{
-    transform: translate(2px,-2px);
-  }
-  4%,60%{
-    transform: translate(-2px,2px);
-  }
-  62%{
-    transform: translate(13px,-1px) skew(-13deg); 
-  }
-}
-
-.h3:after{
-  animation: glitchBotom 1.5s linear infinite;
-  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-}
-
-@keyframes glitchBotom{
-  2%,64%{
-    transform: translate(-2px,0);
-  }
-  4%,60%{
-    transform: translate(-2px,0);
-  }
-  62%{
-    transform: translate(-22px,5px) skew(21deg); 
-  }
-}
-
-.container .def2 {
-  z-index: -20;
-  position: absolute;
-  color: #ffffff;
-  font-family: 'Gemunu Libre', sans-serif;;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: 650;
-  letter-spacing: 2px;
-  bottom: 64%;
-  left: 76%;
-  opacity: 92%;
-  animation: glitch 1s linear infinite;
-  width: 15em;
-  text-align: center;
-}
-
-.container .def3 {
-  z-index: -20;
-  position: absolute;
-  color: #ffffff;
-  font-family: 'Gemunu Libre', sans-serif;;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: 650;
-  letter-spacing: 2px;
-  bottom: 26%;
-  left: 80%;
-  opacity: 92%;
-  animation: glitch 1s linear infinite;
-  width: 15em;
-  text-align: center;
-}
-
-.container .def4 {
-  z-index: -20;
-  position: absolute;
-  color: #ffffff;
-  font-family: 'Gemunu Libre', sans-serif;;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: 650;
-  letter-spacing: 2px;
-  bottom: 66%;
-  left: 6%;
-  opacity: 92%;
-  animation: glitch 1s linear infinite;
-  width: 15em;
-  text-align: center;
-}
-
-.container .def5 {
-  z-index: -20;
-  position: absolute;
-  color: #ffffff;
-  font-family: 'Gemunu Libre', sans-serif;;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: 650;
-  letter-spacing: 2px;
-  bottom: 8%;
-  left: 19%;
-  opacity: 92%;
-  animation: glitch 1s linear infinite;
-  width: 15em;
-  text-align: center;
-}
-
-.container .def6 {
-  z-index: -20;
-  position: absolute;
-  color: #ffffff;
-  font-family: 'Gemunu Libre', sans-serif;;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: 650;
-  letter-spacing: 2px;
-  bottom: 88%;
-  left: 63%;
-  opacity: 92%;
-  animation: glitch 1s linear infinite;
-  width: 15em;
-  text-align: center;
-}
-
-.container .def7 {
-  z-index: 10;
-  position: absolute;
-  color: #ffffff;
-  font-family: 'Gemunu Libre', sans-serif;;
-  font-size: 20px;
-  text-transform: uppercase;
-  font-weight: 650;
-  letter-spacing: 2px;
-  bottom: 93%;
-  left: 85%;
-  opacity: 92%;
-  animation: glitch 1s linear infinite;
-  width: 10em;
-  text-align: center;
-  text-decoration: none;
-}
-
 .container h2 {
     z-index: 1;
     position: relative;
@@ -217,7 +35,6 @@ body {
     font-weight: 950;
     letter-spacing: 32px;
 }
-
 
 
 .container h2 span {
